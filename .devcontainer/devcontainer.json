@@ -6,7 +6,7 @@
     "dockerfile": "Dockerfile",
     // Update 'VARIANT' to pick a Node version: 10, 12, 14
     "args": {
-      "VARIANT": "16",
+      "VARIANT": "16-bullseye",
       "SOLC_VERSION": "0.8.11"
     }
   },
