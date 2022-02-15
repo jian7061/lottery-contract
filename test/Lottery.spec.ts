@@ -241,7 +241,6 @@ describe('Lottery', () => {
       //Only admin can pick a winner.
       await expect(Lottery.pickWinner()).to.emit(Lottery, 'LotteryResult').withArgs(1, 300);
       const winner = await Lottery.winners(1);
-      console.log(winner);
       //Prize of the round should be transferred to winner's account.
       await expect(Lottery.collectPrize(1)).to.emit(Lottery, 'PrizeCollected').withArgs(winner, 300);
     });
